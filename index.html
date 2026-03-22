@@ -1162,24 +1162,24 @@
       <div class="reveal-right">
         <div class="glass rounded-3xl p-8 border border-white/8 glow-purple" style="box-shadow: 0 0 60px rgba(99,102,241,0.08);">
           <h3 class="font-display text-xl font-semibold text-white mb-6">Send us a message</h3>
-          <form id="contact-form" class="space-y-4">
+          <form id="contact-form" action="https://formspree.io/f/xpwzakbj" method="POST" class="space-y-4">
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-medium text-slate-400 mb-2">First Name</label>
-                <input type="text" class="form-input" placeholder="Arjun" required />
+                <input type="text" name="first_name" class="form-input" placeholder="Arjun" required />
               </div>
               <div>
                 <label class="block text-xs font-medium text-slate-400 mb-2">Last Name</label>
-                <input type="text" class="form-input" placeholder="Singh" />
+                <input type="text" name="last_name" class="form-input" placeholder="Singh" />
               </div>
             </div>
             <div>
               <label class="block text-xs font-medium text-slate-400 mb-2">Email Address</label>
-              <input type="email" class="form-input" placeholder="arjun@company.com" required />
+              <input type="email" name="email" class="form-input" placeholder="arjun@company.com" required />
             </div>
             <div>
               <label class="block text-xs font-medium text-slate-400 mb-2">Project Type</label>
-              <select class="form-input" style="appearance:none;">
+              <select name="project_type" class="form-input" style="appearance:none;">
                 <option value="" style="background:#0a0a1a;">Select a service...</option>
                 <option value="web" style="background:#0a0a1a;">Web Development</option>
                 <option value="mobile" style="background:#0a0a1a;">Mobile App</option>
@@ -1191,7 +1191,7 @@
             </div>
             <div>
               <label class="block text-xs font-medium text-slate-400 mb-2">Project Budget</label>
-              <select class="form-input" style="appearance:none;">
+              <select name="budget" class="form-input" style="appearance:none;">
                 <option value="" style="background:#0a0a1a;">Select a budget range...</option>
                 <option value="5-15k" style="background:#0a0a1a;">$5,000 – $15,000</option>
                 <option value="15-50k" style="background:#0a0a1a;">$15,000 – $50,000</option>
@@ -1201,7 +1201,7 @@
             </div>
             <div>
               <label class="block text-xs font-medium text-slate-400 mb-2">Tell us about your project</label>
-              <textarea class="form-input resize-none" rows="4" placeholder="Describe your idea, goals, timeline, and any specific requirements..." required></textarea>
+              <textarea name="message" class="form-input resize-none" rows="4" placeholder="Describe your idea, goals, timeline, and any specific requirements..." required></textarea>
             </div>
             <button type="submit" class="btn-primary w-full text-white font-semibold px-6 py-4 rounded-xl text-sm">
               <span class="relative z-10 flex items-center justify-center gap-2">
@@ -1282,5 +1282,34 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+  (function() {
+    var form = document.getElementById('contact-form');
+    var success = document.getElementById('form-success');
+    if (form && success) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) {
+            form.style.display = 'none';
+            success.classList.remove('hidden');
+          } else {
+            alert('Something went wrong. Please try again.');
+            if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
+          }
+        }).catch(function() {
+          alert('Network error. Please try again.');
+          if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
+        });
+      });
+    }
+  })();
+</script>
 </body>
 </html>
