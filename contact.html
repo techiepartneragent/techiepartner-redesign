@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | TechiePartner</title>
+  <title>Contact | Techiepartner</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script>
@@ -34,7 +34,7 @@
 <body class="min-h-screen">
 
 <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between backdrop-blur-md bg-black/20 border-b border-white/10">
-  <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">TechiePartner</a>
+  <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Techiepartner</a>
   <div class="hidden md:flex items-center gap-8">
     <a href="index.html" class="text-white/70 hover:text-white transition-colors">Home</a>
     <a href="about.html" class="text-white/70 hover:text-white transition-colors">About</a>
@@ -59,13 +59,13 @@
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-16">
       <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-4">Get In Touch</span>
-      <h1 class="font-display text-5xl md:text-6xl font-bold text-white mb-6">Let's <span class="gradient-text">Talk</span></h1>
+      <h1 class="reveal font-display text-5xl md:text-6xl font-bold text-white mb-6">Let's <span class="gradient-text">Talk</span></h1>
       <p class="text-slate-400 text-lg max-w-2xl mx-auto">Have a project in mind? We'd love to hear about it. Fill out the form or reach out directly.</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-12">
       <div>
-        <h2 class="font-display text-2xl font-bold text-white mb-6">Send Us a Message</h2>
+        <h2 class="reveal font-display text-2xl font-bold text-white mb-6">Send Us a Message</h2>
         <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message sent! We will get back to you within 24 hours.');">
           <div>
             <label class="block text-sm text-slate-400 mb-2">Your Name</label>
@@ -88,7 +88,7 @@
       </div>
 
       <div class="space-y-6">
-        <h2 class="font-display text-2xl font-bold text-white mb-6">Contact Info</h2>
+        <h2 class="reveal font-display text-2xl font-bold text-white mb-6">Contact Info</h2>
         <div class="glass border border-white/10 rounded-2xl p-5 flex gap-4 items-start">
           <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center flex-shrink-0 text-lg">📧</div>
           <div>
@@ -133,9 +133,9 @@
       <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
         <span class="text-white font-bold text-xs">TP</span>
       </div>
-      <span class="font-display font-bold text-white">TechiePartner</span>
+      <span class="font-display font-bold text-white">Techiepartner</span>
     </div>
-    <p class="text-slate-500 text-sm">&copy; 2026 TechiePartner. All rights reserved.</p>
+    <p class="text-slate-500 text-sm">&copy; 2026 Techiepartner. All rights reserved.</p>
     <div class="flex gap-6">
       <a href="index.html" class="text-slate-500 hover:text-white text-sm transition-colors">Home</a>
       <a href="about.html" class="text-slate-500 hover:text-white text-sm transition-colors">About</a>
@@ -144,5 +144,45 @@
     </div>
   </div>
 </footer>
+
+<!-- 3D Scroll Effects & Animations -->
+<div id="progress-bar" style="position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#6366f1,#a855f7);z-index:9999;width:0;transition:width 0.1s"></div>
+<style>
+  .reveal { opacity:0; transform:translateY(40px); transition:all 0.7s ease; }
+  .reveal.visible { opacity:1; transform:none; }
+  .tilt-card { transition: transform 0.15s ease; will-change: transform; }
+</style>
+<script>
+  // Page entrance
+  document.body.style.opacity = 0;
+  window.addEventListener('load', () => {
+    document.body.style.transition = 'opacity 0.5s';
+    document.body.style.opacity = 1;
+  });
+  // Scroll progress bar
+  window.addEventListener('scroll', () => {
+    const p = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+    const bar = document.getElementById('progress-bar');
+    if (bar) bar.style.width = p + '%';
+  });
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) { el.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  // 3D tilt cards
+  document.querySelectorAll('.tilt-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(600px) rotateY(${x*15}deg) rotateX(${-y*15}deg) scale(1.03)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+</script>
+
 </body>
 </html>
