@@ -396,6 +396,11 @@
       z-index: 10001;
       transition: width 0.1s linear;
     }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
   </style>
 </head>
 <body>
@@ -508,8 +513,15 @@
       </div>
     </div>
 
-    <!-- Right: 3D floating device mockup -->
+    <!-- Right: Floating illustration -->
     <div class="hidden lg:flex items-center justify-center">
+      <div class="floating">
+        <img src="https://illustrations.popsy.co/purple/app-launch.svg" alt="App Launch Illustration" class="w-full max-w-md mx-auto opacity-90" />
+      </div>
+    </div>
+
+    <!-- Right: 3D floating device mockup (hidden, replaced by illustration) -->
+    <div class="hidden" style="display:none!important">
       <div class="shape-3d relative w-80 h-80">
         <!-- Outer ring -->
         <div class="absolute inset-0 rounded-full border border-brand-500/20 animate-spin-slow"></div>

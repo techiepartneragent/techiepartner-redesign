@@ -29,6 +29,8 @@
     .gradient-text { background: linear-gradient(135deg, #6366f1, #a78bfa, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .card-hover { transition: all 0.3s ease; }
     .card-hover:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.4) !important; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+    .floating { animation: float 4s ease-in-out infinite; }
   </style>
 </head>
 <body class="min-h-screen">
@@ -85,30 +87,35 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
       
       <div class="tilt-card glass border border-white/10 rounded-2xl p-6 card-hover">
+        <div class="floating mb-4"><img src="https://undraw.co/illustrations/undraw_web_developer_re_h7ie.svg" alt="Web Development" class="w-full max-w-md mx-auto opacity-90" style="height:120px;object-fit:contain;" /></div>
         <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mb-4 text-2xl">🌐</div>
         <h3 class="reveal font-semibold text-white text-lg mb-2">Web Development</h3>
         <p class="text-slate-400 text-sm">Custom web applications built with React, Next.js, and modern frameworks. Fast, responsive, and scalable from day one.</p>
       </div>
     
       <div class="tilt-card glass border border-white/10 rounded-2xl p-6 card-hover">
+        <div class="floating mb-4"><img src="https://undraw.co/illustrations/undraw_mobile_development_re_kdis.svg" alt="Mobile Apps" class="w-full max-w-md mx-auto opacity-90" style="height:120px;object-fit:contain;" /></div>
         <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mb-4 text-2xl">📱</div>
         <h3 class="reveal font-semibold text-white text-lg mb-2">Mobile Apps</h3>
         <p class="text-slate-400 text-sm">Native and cross-platform mobile apps for iOS and Android using React Native and Flutter.</p>
       </div>
     
       <div class="tilt-card glass border border-white/10 rounded-2xl p-6 card-hover">
+        <div class="floating mb-4"><img src="https://undraw.co/illustrations/undraw_artificial_intelligence_re_enpp.svg" alt="AI & Automation" class="w-full max-w-md mx-auto opacity-90" style="height:120px;object-fit:contain;" /></div>
         <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mb-4 text-2xl">🤖</div>
         <h3 class="reveal font-semibold text-white text-lg mb-2">AI & Automation</h3>
         <p class="text-slate-400 text-sm">Intelligent agents, n8n workflows, and AI-powered features that save your team hours every week.</p>
       </div>
     
       <div class="tilt-card glass border border-white/10 rounded-2xl p-6 card-hover">
+        <div class="floating mb-4"><img src="https://undraw.co/illustrations/undraw_online_collaboration_re_bkpm.svg" alt="UI/UX Design" class="w-full max-w-md mx-auto opacity-90" style="height:120px;object-fit:contain;" /></div>
         <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mb-4 text-2xl">🎨</div>
         <h3 class="reveal font-semibold text-white text-lg mb-2">UI/UX Design</h3>
         <p class="text-slate-400 text-sm">Pixel-perfect interfaces that users love. From wireframes to interactive prototypes and final design systems.</p>
       </div>
     
       <div class="tilt-card glass border border-white/10 rounded-2xl p-6 card-hover">
+        <div class="floating mb-4"><img src="https://undraw.co/illustrations/undraw_cloud_hosting_re_e40.svg" alt="Cloud & DevOps" class="w-full max-w-md mx-auto opacity-90" style="height:120px;object-fit:contain;" /></div>
         <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mb-4 text-2xl">☁️</div>
         <h3 class="reveal font-semibold text-white text-lg mb-2">Cloud & DevOps</h3>
         <p class="text-slate-400 text-sm">CI/CD pipelines, Kubernetes, AWS, Vercel — we handle infrastructure so you can focus on product.</p>
