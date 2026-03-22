@@ -7,245 +7,248 @@
     <title>Vinod Vicky Raj | Senior Software Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="gradient-bg"></div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">VR</a>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#workflow">Workflow</a>
+                <a href="#hero">Home</a>
+                <a href="#workflow">Process</a>
                 <a href="#tech-stack">Tech Stack</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button class="theme-toggle" aria-label="Toggle dark mode">
-                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            </button>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <a href="#contact" class="btn btn-primary">
+                Let's Talk
+                <span class="arrow-badge">→</span>
+            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-title">Vinod Vicky Raj</h1>
-                <h2 class="hero-subtitle">Senior Software Developer</h2>
-                <p class="hero-description">
-                    Turning ideas into reality using creative solutions. Let's build the next big thing together.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Start a Project</a>
-                    <a href="#workflow" class="btn btn-secondary">View My Process</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-card">
-                    <div class="card-glow"></div>
-                    <div class="code-window">
-                        <div class="window-header">
-                            <div class="window-dots">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                            </div>
-                        </div>
-                        <div class="code-content">
-                            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
-  <span class="property">name</span>: <span class="string">"Vinod Vicky Raj"</span>,
-  <span class="property">role</span>: <span class="string">"Senior Developer"</span>,
-  <span class="property">skills</span>: [<span class="string">"full-stack"</span>, <span class="string">"AI"</span>],
-  <span class="property">mission</span>: <span class="string">"Build amazing things"</span>
-};
+                <div class="hero-left">
+                    <p class="hero-section-label">Senior Software Developer</p>
+                    <div class="hero-title-group">
+                        <h1 class="hero-title">Turning ideas<br>into digital reality</h1>
+                    </div>
+                    <p class="hero-description">
+                        Creative solutions for complex challenges. Let's build the next big thing together.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            Start a project
+                            <span class="arrow-badge">→</span>
+                        </a>
+                    </div>
 
-<span class="keyword">async function</span> <span class="function">createMagic</span>() {
-  <span class="keyword">return</span> <span class="keyword">await</span> <span class="variable">developer</span>.<span class="method">collaborate</span>(<span class="string">"you"</span>);
-}</code></pre>
+                    <!-- Service Numbers -->
+                    <div class="service-numbers">
+                        <div class="service-number-item">
+                            <div class="service-number">01</div>
+                            <div class="service-label">Strategy</div>
                         </div>
+                        <div class="service-number-item">
+                            <div class="service-number">02</div>
+                            <div class="service-label">Design</div>
+                        </div>
+                        <div class="service-number-item">
+                            <div class="service-number">03</div>
+                            <div class="service-label">Build</div>
+                        </div>
+                        <div class="service-number-item">
+                            <div class="service-number">04</div>
+                            <div class="service-label">Launch</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <!-- Code Card / Portrait would go here -->
+                    <div class="workflow-item" style="padding: 3rem;">
+                        <h3 style="font-size: 2rem; margin-bottom: 1rem;">Tech Expertise</h3>
+                        <p style="color: var(--gray-muted); line-height: 1.8;">
+                            Full-stack development with modern frameworks, AI integration, and scalable architectures.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
+    <!-- Trusted Logos Bar -->
+    <section class="logos-section">
         <div class="container">
-            <h2 class="section-title">What I Do</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    </div>
-                    <h3>Cutting-Edge Web Apps</h3>
-                    <p>Building modern, performant web applications with the latest frameworks and best practices.</p>
+            <p class="logos-header">Technologies I Work With</p>
+            <div class="logos-track">
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Node.js
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-                    </div>
-                    <h3>Robust Backend Systems</h3>
-                    <p>Scalable server architectures, API design, and database optimization for high-load applications.</p>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    Python
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"></path><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
-                    </div>
-                    <h3>AI-Driven Solutions</h3>
-                    <p>Integrating OpenAI, Groq, and custom ML models to create intelligent, automated workflows.</p>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.5L18.5 20H5.5L12 5.5z"/></svg>
+                    Vue.js
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    OpenAI
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
+                    Laravel
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    APIs
+                </div>
+                <!-- Duplicate for scroll loop -->
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Node.js
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    Python
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.5L18.5 20H5.5L12 5.5z"/></svg>
+                    Vue.js
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    OpenAI
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / CTA Section -->
+    <section id="contact" class="about-section contact-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-left">
+                    <p class="contact-label">Behind the Designs</p>
+                    <h2 class="about-heading">Let's create something extraordinary together</h2>
+                </div>
+                <div class="about-right">
+                    <p class="about-text">
+                        Whether you need a cutting-edge web application, a robust backend system, or an AI-driven solution, I'm here to help bring your vision to life.
+                    </p>
+                    <a href="mailto:vinodvickyraj@gmail.com" class="btn btn-primary about-cta">
+                        Get in touch
+                        <span class="arrow-badge">→</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Workflow Section -->
-    <section id="workflow" class="section workflow">
+    <section id="workflow" class="workflow-section">
         <div class="container">
-            <h2 class="section-title">My Workflow</h2>
-            <div class="workflow-timeline">
-                <div class="workflow-step">
+            <div class="section-header">
+                <span class="section-label">My Process</span>
+                <h2 class="section-title">How I work</h2>
+            </div>
+            <div class="workflow-grid">
+                <div class="workflow-item">
                     <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>Discovery</h3>
-                        <p>Thoroughly understanding project requirements, goals, and user needs to establish a solid foundation.</p>
-                    </div>
+                    <h3>Discovery</h3>
+                    <p>Thoroughly understanding requirements, goals, and user needs to establish a solid foundation.</p>
                 </div>
-                <div class="workflow-step">
+                <div class="workflow-item">
                     <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Architecture</h3>
-                        <p>Designing solution architecture and database structure for scalability and maintainability.</p>
-                    </div>
+                    <h3>Architecture</h3>
+                    <p>Designing solution architecture and database structure for scalability and maintainability.</p>
                 </div>
-                <div class="workflow-step">
+                <div class="workflow-item">
                     <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Development</h3>
-                        <p>Writing clean, efficient code with unit testing to ensure all components function optimally.</p>
-                    </div>
+                    <h3>Development</h3>
+                    <p>Writing clean, efficient code with unit testing to ensure all components function optimally.</p>
                 </div>
-                <div class="workflow-step">
+                <div class="workflow-item">
                     <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3>Deployment</h3>
-                        <p>Handling server configuration, hosting, and ensuring smooth launch with performance optimization.</p>
-                    </div>
+                    <h3>Deployment</h3>
+                    <p>Handling server configuration, hosting, and ensuring smooth launch with performance optimization.</p>
                 </div>
-                <div class="workflow-step">
+                <div class="workflow-item">
                     <div class="step-number">05</div>
-                    <div class="step-content">
-                        <h3>Support</h3>
-                        <p>Ongoing technical support, feature updates, and security maintenance after handover.</p>
-                    </div>
+                    <h3>Support</h3>
+                    <p>Ongoing technical support, feature updates, and security maintenance after handover.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Tech Stack Section -->
-    <section id="tech-stack" class="section tech-stack">
+    <section id="tech-stack" class="tech-section">
         <div class="container">
-            <h2 class="section-title">Tech Stack</h2>
-            <p class="section-description">Technologies and tools I use to bring your projects to life</p>
-            <div class="bento-grid">
-                <div class="bento-item large">
-                    <div class="bento-content">
-                        <h3>Frontend</h3>
-                        <div class="tech-list">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript (ES6+)</span>
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Bootstrap</span>
-                            <span class="tech-tag">Tailwind CSS</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bento-item">
-                    <div class="bento-content">
-                        <h3>Backend</h3>
-                        <div class="tech-list">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">CodeIgniter</span>
-                            <span class="tech-tag">Symfony</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bento-item">
-                    <div class="bento-content">
-                        <h3>Databases</h3>
-                        <div class="tech-list">
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">Firebase</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bento-item wide">
-                    <div class="bento-content">
-                        <h3>AI & APIs</h3>
-                        <div class="tech-list">
-                            <span class="tech-tag">OpenAI API</span>
-                            <span class="tech-tag">Groq API</span>
-                            <span class="tech-tag">Ollama</span>
-                            <span class="tech-tag">Facebook Graph API</span>
-                            <span class="tech-tag">Google APIs</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bento-item">
-                    <div class="bento-content">
-                        <h3>DevOps</h3>
-                        <div class="tech-list">
-                            <span class="tech-tag">Git</span>
-                            <span class="tech-tag">CI/CD</span>
-                            <span class="tech-tag">Server Admin</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bento-item">
-                    <div class="bento-content">
-                        <h3>CMS & E-Commerce</h3>
-                        <div class="tech-list">
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">WooCommerce</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-label">Expertise</span>
+                <h2 class="section-title">Tech Stack</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title">Let's Collaborate</h2>
-                <p class="contact-text">
-                    Looking to start a new project or need a dedicated developer for your team? 
-                    Reach out and let's create something amazing together.
-                </p>
-                <div class="contact-cta">
-                    <a href="mailto:vinodvickyraj@gmail.com" class="btn btn-primary btn-large">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        Get in Touch
-                    </a>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Frontend</h3>
+                    <div class="tech-list">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <h3>Backend</h3>
+                    <div class="tech-list">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">CodeIgniter</span>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <h3>Databases</h3>
+                    <div class="tech-list">
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <h3>AI & APIs</h3>
+                    <div class="tech-list">
+                        <span class="tech-tag">OpenAI API</span>
+                        <span class="tech-tag">Groq API</span>
+                        <span class="tech-tag">Ollama</span>
+                        <span class="tech-tag">Google APIs</span>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <h3>DevOps</h3>
+                    <div class="tech-list">
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">CI/CD</span>
+                        <span class="tech-tag">Server Admin</span>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <h3>CMS & E-Commerce</h3>
+                    <div class="tech-list">
+                        <span class="tech-tag">WordPress</span>
+                        <span class="tech-tag">WooCommerce</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -254,7 +257,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Vinod Vicky Raj. Built with passion and code.</p>
+            <p>&copy; 2025 Vinod Vicky Raj. Built with precision and passion.</p>
         </div>
     </footer>
 
