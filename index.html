@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechiPartner — We Build What You Imagine</title>
-  <meta name="description" content="TechiPartner is a premium software development company building world-class digital products, mobile apps, and web experiences." />
+  <title>TechiePartner — We Build What You Imagine</title>
+  <meta name="description" content="TechiePartner is a premium software development company building world-class digital products, mobile apps, and web experiences." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -13,15 +13,15 @@
   <!-- Open Graph / Social Meta -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://techiepartner.com/" />
-  <meta property="og:title" content="TechiPartner — We Build What You Imagine" />
-  <meta property="og:description" content="TechiPartner is a premium software development company building world-class digital products, mobile apps, and web experiences." />
+  <meta property="og:title" content="TechiePartner — We Build What You Imagine" />
+  <meta property="og:description" content="TechiePartner is a premium software development company building world-class digital products, mobile apps, and web experiences." />
   <meta property="og:image" content="https://techiepartner.com/favicon.svg" />
-  <meta property="og:site_name" content="TechiPartner" />
+  <meta property="og:site_name" content="TechiePartner" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="TechiPartner — We Build What You Imagine" />
-  <meta name="twitter:description" content="TechiPartner is a premium software development company building world-class digital products, mobile apps, and web experiences." />
+  <meta name="twitter:title" content="TechiePartner — We Build What You Imagine" />
+  <meta name="twitter:description" content="TechiePartner is a premium software development company building world-class digital products, mobile apps, and web experiences." />
   <meta name="twitter:image" content="https://techiepartner.com/favicon.svg" />
 
   <!-- Tailwind CSS CDN -->
@@ -414,41 +414,24 @@
 <div id="cursor-glow"></div>
 
 <!-- ═══════════════════════════════════════════════════════ NAVBAR -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-[9000] px-6 py-4">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
-    <!-- Logo -->
-    <a href="index.html" class="flex items-center gap-3 group">
-      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      </div>
-      <span class="font-display font-700 text-xl text-white">Techi<span class="gradient-text">Partner</span></span>
-    </a>
-
-    <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center gap-8">
-      <a href="index.html"     class="nav-link text-sm font-medium text-slate-400 hover:text-white">Home</a>
-      <a href="about.html"    class="nav-link text-sm font-medium text-slate-400 hover:text-white">About</a>
-      <a href="services.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Services</a>
-      <a href="portfolio.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Portfolio</a>
-      <a href="blog.html"     class="nav-link text-sm font-medium text-slate-400 hover:text-white">Blog</a>
-      <a href="contact.html"  class="nav-link text-sm font-medium text-slate-400 hover:text-white">Contact</a>
-    </div>
-
-    <!-- CTA -->
-    <div class="hidden md:flex items-center gap-4">
-      <a href="contact.html" class="btn-primary text-sm font-semibold text-white px-5 py-2.5 rounded-xl">
-        <span class="relative z-10">Get Started →</span>
-      </a>
-    </div>
-
-    <!-- Mobile hamburger -->
-    <button id="hamburger" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 rounded-xl glass p-2" aria-label="Menu">
-      <span class="ham-line w-5 h-0.5 bg-white rounded-full transition-all duration-300"></span>
-      <span class="ham-line w-5 h-0.5 bg-white rounded-full transition-all duration-300"></span>
-      <span class="ham-line w-5 h-0.5 bg-white rounded-full transition-all duration-300"></span>
-    </button>
+<nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between backdrop-blur-md bg-black/20 border-b border-white/10">
+  <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">TechiePartner</a>
+  <div class="hidden md:flex items-center gap-8">
+    <a href="index.html" class="text-white/70 hover:text-white transition-colors">Home</a>
+    <a href="about.html" class="text-white/70 hover:text-white transition-colors">About</a>
+    <a href="services.html" class="text-white/70 hover:text-white transition-colors">Services</a>
+    <a href="portfolio.html" class="text-white/70 hover:text-white transition-colors">Portfolio</a>
+    <a href="blog.html" class="text-white/70 hover:text-white transition-colors">Blog</a>
+    <a href="contact.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-colors">Contact Us</a>
+  </div>
+  <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">☰</button>
+  <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-md p-4 flex flex-col gap-4 border-b border-white/10">
+    <a href="index.html" class="text-white/70 hover:text-white">Home</a>
+    <a href="about.html" class="text-white/70 hover:text-white">About</a>
+    <a href="services.html" class="text-white/70 hover:text-white">Services</a>
+    <a href="portfolio.html" class="text-white/70 hover:text-white">Portfolio</a>
+    <a href="blog.html" class="text-white/70 hover:text-white">Blog</a>
+    <a href="contact.html" class="text-white/70 hover:text-white">Contact</a>
   </div>
 </nav>
 
@@ -491,7 +474,7 @@
       </h1>
 
       <p class="text-lg text-slate-400 leading-relaxed max-w-lg mb-10 reveal" style="transition-delay:0.1s">
-        TechiPartner is a premium software development studio crafting scalable web apps, mobile experiences, and digital products that make users say <em class="text-white not-italic font-medium">"wow."</em>
+        TechiePartner is a premium software development studio crafting scalable web apps, mobile experiences, and digital products that make users say <em class="text-white not-italic font-medium">"wow."</em>
       </p>
 
       <div class="flex flex-wrap gap-4 reveal" style="transition-delay:0.2s">
@@ -625,7 +608,7 @@
         </h2>
 
         <p class="text-slate-400 leading-relaxed mb-6 reveal" style="transition-delay:0.1s">
-          Founded by Vinod Vicky Raj, TechiPartner is a full-service software development company based in India. We partner with startups and enterprises to transform ambitious ideas into elegant, production-grade digital products.
+          Founded by Vinod Vicky Raj, TechiePartner is a full-service software development company based in India. We partner with startups and enterprises to transform ambitious ideas into elegant, production-grade digital products.
         </p>
         <p class="text-slate-400 leading-relaxed mb-10 reveal" style="transition-delay:0.2s">
           We're not just coders — we're product thinkers who obsess over user experience, performance, and business outcomes. Every line of code we write serves a purpose.
@@ -1039,7 +1022,7 @@
           <div class="flex gap-1 mb-4">
             <span class="text-amber-400 text-sm">★★★★★</span>
           </div>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">"TechiPartner delivered our MVP in just 6 weeks. The quality was exceptional — we raised our seed round within a month of launch."</p>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">"TechiePartner delivered our MVP in just 6 weeks. The quality was exceptional — we raised our seed round within a month of launch."</p>
           <div class="flex items-center gap-3">
             <div class="w-9 h-9 rounded-full bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center text-xs font-bold text-white">AS</div>
             <div>
@@ -1277,7 +1260,7 @@
     </div>
 
     <div class="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs text-slate-600">© 2024 TechiPartner. All rights reserved. Built with ❤️ by Vinod Vicky Raj.</p>
+      <p class="text-xs text-slate-600">© 2024 TechiePartner. All rights reserved. Built with ❤️ by Vinod Vicky Raj.</p>
 
     </div>
   </div>
