@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | TechiePartner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#f0f4ff',100:'#e0eaff',200:'#c7d7fe',300:'#a5bafb',400:'#8194f8',500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81' },
+            accent: { 400:'#a78bfa',500:'#8b5cf6' },
+            dark: { 900:'#050510',800:'#0a0a1a',700:'#0f0f2a',600:'#161630' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #050510; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+    .glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(20px); }
+    .btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); transition: all 0.3s ease; }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .nav-link { position: relative; transition: color 0.3s; }
+    .gradient-text { background: linear-gradient(135deg, #6366f1, #a78bfa, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.4) !important; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-[9000] px-6 py-4 bg-dark-900/80 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+        <span class="text-white font-bold text-sm">TP</span>
+      </div>
+      <span class="font-display font-bold text-white text-lg">TechiePartner</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Home</a>
+      <a href="about.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">About</a>
+      <a href="services.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Services</a>
+      <a href="portfolio.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Portfolio</a>
+      <a href="blog.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Blog</a>
+      <a href="contact.html" class="btn-primary text-sm font-semibold text-white px-5 py-2.5 rounded-xl">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+
+<main class="pt-32 pb-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-4">Our Blog</span>
+      <h1 class="font-display text-5xl md:text-6xl font-bold text-white mb-6">Insights & <span class="gradient-text">Ideas</span></h1>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">Thoughts on software development, design, AI, and building products from the TechiePartner team.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      
+      <a href="blog/blog-1.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-brand-600/30 to-brand-500/10 flex items-center justify-center">
+          <span class="text-4xl">💡</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-brand-400 bg-brand-500/10 px-2 py-1 rounded-full">Startup</span>
+            <span class="text-xs text-slate-500">March 5, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">Why Kerala Startups Choose Custom Software</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-2.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-purple-600/30 to-purple-500/10 flex items-center justify-center">
+          <span class="text-4xl">🚀</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-purple-400 bg-purple-500/10 px-2 py-1 rounded-full">Automation</span>
+            <span class="text-xs text-slate-500">March 6, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">n8n vs Zapier: The Open Source Advantage</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-3.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-pink-600/30 to-pink-500/10 flex items-center justify-center">
+          <span class="text-4xl">📝</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-pink-400 bg-pink-500/10 px-2 py-1 rounded-full">AI</span>
+            <span class="text-xs text-slate-500">March 7, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">Building AI Agents with OpenClaw</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-4.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-cyan-600/30 to-cyan-500/10 flex items-center justify-center">
+          <span class="text-4xl">💡</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded-full">Technology</span>
+            <span class="text-xs text-slate-500">March 8, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">Web Development Trends in 2026</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-5.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-emerald-600/30 to-emerald-500/10 flex items-center justify-center">
+          <span class="text-4xl">🚀</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded-full">Team</span>
+            <span class="text-xs text-slate-500">March 9, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">How to Hire a Junior Developer in Kozhikode</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-6.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-orange-600/30 to-orange-500/10 flex items-center justify-center">
+          <span class="text-4xl">📝</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-orange-400 bg-orange-500/10 px-2 py-1 rounded-full">Engineering</span>
+            <span class="text-xs text-slate-500">March 10, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">REST vs GraphQL: Which Should You Use?</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-7.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-yellow-600/30 to-yellow-500/10 flex items-center justify-center">
+          <span class="text-4xl">💡</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-yellow-400 bg-yellow-500/10 px-2 py-1 rounded-full">Frontend</span>
+            <span class="text-xs text-slate-500">March 11, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">TailwindCSS vs Bootstrap in 2026</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-8.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-teal-600/30 to-teal-500/10 flex items-center justify-center">
+          <span class="text-4xl">🚀</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-teal-400 bg-teal-500/10 px-2 py-1 rounded-full">Mobile</span>
+            <span class="text-xs text-slate-500">March 12, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">Mobile-First Development Guide</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-9.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-orange-600/30 to-orange-500/10 flex items-center justify-center">
+          <span class="text-4xl">📝</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-orange-400 bg-orange-500/10 px-2 py-1 rounded-full">Engineering</span>
+            <span class="text-xs text-slate-500">March 13, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">How We Build Scalable Apps at TechiePartner</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-10.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-rose-600/30 to-rose-500/10 flex items-center justify-center">
+          <span class="text-4xl">💡</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-rose-400 bg-rose-500/10 px-2 py-1 rounded-full">Marketing</span>
+            <span class="text-xs text-slate-500">March 14, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">SEO for Software Companies</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-11.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-violet-600/30 to-violet-500/10 flex items-center justify-center">
+          <span class="text-4xl">🚀</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-violet-400 bg-violet-500/10 px-2 py-1 rounded-full">Product</span>
+            <span class="text-xs text-slate-500">March 15, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">From Idea to MVP in 30 Days</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-12.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-purple-600/30 to-purple-500/10 flex items-center justify-center">
+          <span class="text-4xl">📝</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-purple-400 bg-purple-500/10 px-2 py-1 rounded-full">Automation</span>
+            <span class="text-xs text-slate-500">March 16, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">Automating Business Workflows with n8n</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-13.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-pink-600/30 to-pink-500/10 flex items-center justify-center">
+          <span class="text-4xl">💡</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-pink-400 bg-pink-500/10 px-2 py-1 rounded-full">AI</span>
+            <span class="text-xs text-slate-500">March 17, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">The Rise of AI in Software Testing</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-14.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-emerald-600/30 to-emerald-500/10 flex items-center justify-center">
+          <span class="text-4xl">🚀</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-1 rounded-full">Team</span>
+            <span class="text-xs text-slate-500">March 18, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">Building a Great Developer Team Culture</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-15.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-yellow-600/30 to-yellow-500/10 flex items-center justify-center">
+          <span class="text-4xl">📝</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-yellow-400 bg-yellow-500/10 px-2 py-1 rounded-full">Frontend</span>
+            <span class="text-xs text-slate-500">March 19, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">React vs Vue in 2026</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-16.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-blue-600/30 to-blue-500/10 flex items-center justify-center">
+          <span class="text-4xl">💡</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-blue-400 bg-blue-500/10 px-2 py-1 rounded-full">DevOps</span>
+            <span class="text-xs text-slate-500">March 20, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">Cloud Deployment: AWS vs Vercel vs Netlify</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-17.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-amber-600/30 to-amber-500/10 flex items-center justify-center">
+          <span class="text-4xl">🚀</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-amber-400 bg-amber-500/10 px-2 py-1 rounded-full">Business</span>
+            <span class="text-xs text-slate-500">March 21, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">How to Get Your First Tech Client</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-18.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-orange-600/30 to-orange-500/10 flex items-center justify-center">
+          <span class="text-4xl">📝</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-orange-400 bg-orange-500/10 px-2 py-1 rounded-full">Engineering</span>
+            <span class="text-xs text-slate-500">March 22, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">Why Documentation Matters in Software Projects</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-19.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-lime-600/30 to-lime-500/10 flex items-center justify-center">
+          <span class="text-4xl">💡</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-lime-400 bg-lime-500/10 px-2 py-1 rounded-full">Tools</span>
+            <span class="text-xs text-slate-500">March 23, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">Open Source Tools We Use at TechiePartner</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+      <a href="blog/blog-20.html" class="glass border border-white/10 rounded-2xl overflow-hidden card-hover block">
+        <div class="h-32 bg-gradient-to-br from-indigo-600/30 to-indigo-500/10 flex items-center justify-center">
+          <span class="text-4xl">🚀</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs font-semibold text-indigo-400 bg-indigo-500/10 px-2 py-1 rounded-full">Industry</span>
+            <span class="text-xs text-slate-500">March 24, 2026</span>
+          </div>
+          <h3 class="font-semibold text-white mb-2 leading-snug">The Future of Web Development in India</h3>
+          <span class="text-brand-400 text-sm font-medium">Read more →</span>
+        </div>
+      </a>
+    
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-white/5 py-12 px-6 mt-20">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+        <span class="text-white font-bold text-xs">TP</span>
+      </div>
+      <span class="font-display font-bold text-white">TechiePartner</span>
+    </div>
+    <p class="text-slate-500 text-sm">&copy; 2026 TechiePartner. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="index.html" class="text-slate-500 hover:text-white text-sm transition-colors">Home</a>
+      <a href="about.html" class="text-slate-500 hover:text-white text-sm transition-colors">About</a>
+      <a href="blog.html" class="text-slate-500 hover:text-white text-sm transition-colors">Blog</a>
+      <a href="contact.html" class="text-slate-500 hover:text-white text-sm transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

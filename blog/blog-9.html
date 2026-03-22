@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Build Scalable Apps at TechiePartner | TechiePartner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#f0f4ff',100:'#e0eaff',200:'#c7d7fe',300:'#a5bafb',400:'#8194f8',500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81' },
+            accent: { 400:'#a78bfa',500:'#8b5cf6' },
+            dark: { 900:'#050510',800:'#0a0a1a',700:'#0f0f2a',600:'#161630' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #050510; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+    .glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(20px); }
+    .btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); transition: all 0.3s ease; }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .nav-link { position: relative; transition: color 0.3s; }
+    .gradient-text { background: linear-gradient(135deg, #6366f1, #a78bfa, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.4) !important; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-[9000] px-6 py-4 bg-dark-900/80 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+        <span class="text-white font-bold text-sm">TP</span>
+      </div>
+      <span class="font-display font-bold text-white text-lg">TechiePartner</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="../index.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Home</a>
+      <a href="../about.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">About</a>
+      <a href="../services.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Services</a>
+      <a href="../portfolio.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Portfolio</a>
+      <a href="../blog.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Blog</a>
+      <a href="../contact.html" class="btn-primary text-sm font-semibold text-white px-5 py-2.5 rounded-xl">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+
+<main class="pt-32 pb-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-8">
+      <a href="../blog.html" class="text-slate-500 hover:text-white text-sm transition-colors">← Back to Blog</a>
+    </div>
+    <article>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-xs font-semibold text-orange-400 bg-orange-500/10 px-3 py-1.5 rounded-full border border-orange-500/20">Engineering</span>
+        <span class="text-slate-500 text-sm">March 13, 2026</span>
+        <span class="text-slate-600 text-sm">· 4 min read</span>
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">How We Build Scalable Apps at TechiePartner</h1>
+      <div class="flex items-center gap-3 mb-10 pb-10 border-b border-white/10">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center text-white font-bold text-sm">TP</div>
+        <div>
+          <div class="text-white text-sm font-medium">TechiePartner Team</div>
+          <div class="text-slate-500 text-xs">Published March 13, 2026</div>
+        </div>
+      </div>
+      <div class="prose prose-invert max-w-none space-y-4">
+        <p class="text-slate-400 leading-relaxed text-lg">
+          Scalability isn't about handling millions of users from day one. It's about building systems that can grow without requiring a complete rewrite. Here's our architecture philosophy at TechiePartner.
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">Start Simple, Structure Well</h3>
+<p class="text-slate-400 mb-4">We don't build microservices for MVP projects. A well-structured monolith is easier to develop, deploy, and debug. The key is maintaining clean boundaries between modules from the start — so when (if) you need to extract a service, the seams are already there.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">Database Design Is Everything</h3>
+<p class="text-slate-400 mb-4">More scalability problems come from database design than from server capacity. We spend significant time on schema design, indexing strategy, and query optimization early. A poorly indexed table that works fine at 10,000 rows becomes a crisis at 1 million.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">Caching as a First-Class Concern</h3>
+<p class="text-slate-400 mb-4">Redis caching, CDN caching, HTTP caching headers — we implement caching at every layer. The fastest request is one that never hits your server. A well-designed caching strategy can handle 10x more traffic with the same infrastructure.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">Async Everything</h3>
+<p class="text-slate-400 mb-4">Slow operations (emails, image processing, report generation) should never block the request cycle. We use job queues (BullMQ, Inngest) to push heavy work to background workers. This keeps response times fast regardless of what's happening behind the scenes.</p>
+
+<p class="text-slate-400">Observability is the underrated pillar of scalability. Logs, metrics, and traces let you see problems before users do. We instrument every production application with proper error tracking and performance monitoring from deployment day one.</p>
+        </p>
+      </div>
+    </article>
+    <div class="mt-16 pt-10 border-t border-white/10 flex justify-between items-center">
+      <a href="blog-8.html" class="text-brand-400 hover:text-brand-300 transition-colors text-sm">← Previous Post</a>
+      <a href="blog-10.html" class="text-brand-400 hover:text-brand-300 transition-colors text-sm">Next Post →</a>
+    </div>
+    <div class="mt-12 glass border border-white/10 rounded-3xl p-8 text-center">
+      <h2 class="font-display text-2xl font-bold text-white mb-3">Ready to Work Together?</h2>
+      <p class="text-slate-400 mb-6">Let's build something great for your business.</p>
+      <a href="../contact.html" class="btn-primary text-white font-semibold px-6 py-3 rounded-xl inline-block">Start a Project</a>
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-white/5 py-12 px-6 mt-20">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+        <span class="text-white font-bold text-xs">TP</span>
+      </div>
+      <span class="font-display font-bold text-white">TechiePartner</span>
+    </div>
+    <p class="text-slate-500 text-sm">&copy; 2026 TechiePartner. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="../index.html" class="text-slate-500 hover:text-white text-sm transition-colors">Home</a>
+      <a href="../about.html" class="text-slate-500 hover:text-white text-sm transition-colors">About</a>
+      <a href="../blog.html" class="text-slate-500 hover:text-white text-sm transition-colors">Blog</a>
+      <a href="../contact.html" class="text-slate-500 hover:text-white text-sm transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

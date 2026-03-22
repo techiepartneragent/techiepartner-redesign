@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Development Trends in 2026 | TechiePartner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#f0f4ff',100:'#e0eaff',200:'#c7d7fe',300:'#a5bafb',400:'#8194f8',500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81' },
+            accent: { 400:'#a78bfa',500:'#8b5cf6' },
+            dark: { 900:'#050510',800:'#0a0a1a',700:'#0f0f2a',600:'#161630' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #050510; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+    .glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(20px); }
+    .btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); transition: all 0.3s ease; }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .nav-link { position: relative; transition: color 0.3s; }
+    .gradient-text { background: linear-gradient(135deg, #6366f1, #a78bfa, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.4) !important; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-[9000] px-6 py-4 bg-dark-900/80 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+        <span class="text-white font-bold text-sm">TP</span>
+      </div>
+      <span class="font-display font-bold text-white text-lg">TechiePartner</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="../index.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Home</a>
+      <a href="../about.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">About</a>
+      <a href="../services.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Services</a>
+      <a href="../portfolio.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Portfolio</a>
+      <a href="../blog.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Blog</a>
+      <a href="../contact.html" class="btn-primary text-sm font-semibold text-white px-5 py-2.5 rounded-xl">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+
+<main class="pt-32 pb-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-8">
+      <a href="../blog.html" class="text-slate-500 hover:text-white text-sm transition-colors">← Back to Blog</a>
+    </div>
+    <article>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-xs font-semibold text-cyan-400 bg-cyan-500/10 px-3 py-1.5 rounded-full border border-cyan-500/20">Technology</span>
+        <span class="text-slate-500 text-sm">March 8, 2026</span>
+        <span class="text-slate-600 text-sm">· 4 min read</span>
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">Web Development Trends in 2026</h1>
+      <div class="flex items-center gap-3 mb-10 pb-10 border-b border-white/10">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center text-white font-bold text-sm">TP</div>
+        <div>
+          <div class="text-white text-sm font-medium">TechiePartner Team</div>
+          <div class="text-slate-500 text-xs">Published March 8, 2026</div>
+        </div>
+      </div>
+      <div class="prose prose-invert max-w-none space-y-4">
+        <p class="text-slate-400 leading-relaxed text-lg">
+          Web development evolves fast. In 2026, several trends have moved from experimental to mainstream — and if you're building new products, you need to know about them.
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">Server Components Are Now Standard</h3>
+<p class="text-slate-400 mb-4">React Server Components, stabilized in Next.js 14+, have fundamentally changed how we think about rendering. The ability to run components on the server without shipping JavaScript to the client has dramatically improved performance metrics across the board.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">AI-Generated UI</h3>
+<p class="text-slate-400 mb-4">Tools like v0.dev, Cursor, and GitHub Copilot have made it possible to generate production-quality UI from natural language descriptions. Senior developers use these tools to prototype 10x faster — not to replace creativity, but to eliminate boilerplate.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">Edge-First Architecture</h3>
+<p class="text-slate-400 mb-4">Deploying to the edge (Cloudflare Workers, Vercel Edge Functions) instead of centralized servers reduces latency globally. In 2026, a user in Kozhikode should have the same experience as one in San Francisco. Edge computing makes this possible.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">CSS Has Never Been More Powerful</h3>
+<p class="text-slate-400 mb-4">Container queries, cascade layers, the :has() selector, and scroll-driven animations have transformed CSS from a layout language into a full design system toolkit. We're writing less JavaScript to achieve more visual complexity.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">WebAssembly Goes Mainstream</h3>
+<p class="text-slate-400">WASM is no longer a niche technology. Complex computations — video processing, cryptography, game physics — now run in the browser at near-native speed. This opens entirely new categories of web applications that were previously impossible.</p>
+        </p>
+      </div>
+    </article>
+    <div class="mt-16 pt-10 border-t border-white/10 flex justify-between items-center">
+      <a href="blog-3.html" class="text-brand-400 hover:text-brand-300 transition-colors text-sm">← Previous Post</a>
+      <a href="blog-5.html" class="text-brand-400 hover:text-brand-300 transition-colors text-sm">Next Post →</a>
+    </div>
+    <div class="mt-12 glass border border-white/10 rounded-3xl p-8 text-center">
+      <h2 class="font-display text-2xl font-bold text-white mb-3">Ready to Work Together?</h2>
+      <p class="text-slate-400 mb-6">Let's build something great for your business.</p>
+      <a href="../contact.html" class="btn-primary text-white font-semibold px-6 py-3 rounded-xl inline-block">Start a Project</a>
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-white/5 py-12 px-6 mt-20">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+        <span class="text-white font-bold text-xs">TP</span>
+      </div>
+      <span class="font-display font-bold text-white">TechiePartner</span>
+    </div>
+    <p class="text-slate-500 text-sm">&copy; 2026 TechiePartner. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="../index.html" class="text-slate-500 hover:text-white text-sm transition-colors">Home</a>
+      <a href="../about.html" class="text-slate-500 hover:text-white text-sm transition-colors">About</a>
+      <a href="../blog.html" class="text-slate-500 hover:text-white text-sm transition-colors">Blog</a>
+      <a href="../contact.html" class="text-slate-500 hover:text-white text-sm transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

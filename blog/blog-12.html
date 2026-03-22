@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automating Business Workflows with n8n | TechiePartner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#f0f4ff',100:'#e0eaff',200:'#c7d7fe',300:'#a5bafb',400:'#8194f8',500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81' },
+            accent: { 400:'#a78bfa',500:'#8b5cf6' },
+            dark: { 900:'#050510',800:'#0a0a1a',700:'#0f0f2a',600:'#161630' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #050510; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+    .glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(20px); }
+    .btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); transition: all 0.3s ease; }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .nav-link { position: relative; transition: color 0.3s; }
+    .gradient-text { background: linear-gradient(135deg, #6366f1, #a78bfa, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.4) !important; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-[9000] px-6 py-4 bg-dark-900/80 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="../index.html" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+        <span class="text-white font-bold text-sm">TP</span>
+      </div>
+      <span class="font-display font-bold text-white text-lg">TechiePartner</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="../index.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Home</a>
+      <a href="../about.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">About</a>
+      <a href="../services.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Services</a>
+      <a href="../portfolio.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Portfolio</a>
+      <a href="../blog.html" class="nav-link text-sm font-medium text-slate-400 hover:text-white">Blog</a>
+      <a href="../contact.html" class="btn-primary text-sm font-semibold text-white px-5 py-2.5 rounded-xl">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+
+<main class="pt-32 pb-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-8">
+      <a href="../blog.html" class="text-slate-500 hover:text-white text-sm transition-colors">← Back to Blog</a>
+    </div>
+    <article>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-xs font-semibold text-purple-400 bg-purple-500/10 px-3 py-1.5 rounded-full border border-purple-500/20">Automation</span>
+        <span class="text-slate-500 text-sm">March 16, 2026</span>
+        <span class="text-slate-600 text-sm">· 4 min read</span>
+      </div>
+      <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">Automating Business Workflows with n8n</h1>
+      <div class="flex items-center gap-3 mb-10 pb-10 border-b border-white/10">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center text-white font-bold text-sm">TP</div>
+        <div>
+          <div class="text-white text-sm font-medium">TechiePartner Team</div>
+          <div class="text-slate-500 text-xs">Published March 16, 2026</div>
+        </div>
+      </div>
+      <div class="prose prose-invert max-w-none space-y-4">
+        <p class="text-slate-400 leading-relaxed text-lg">
+          Every business has repetitive, manual processes that drain time and introduce human error. n8n is our tool of choice for eliminating these — and it's more powerful than most people realize.
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">What Is a Workflow?</h3>
+<p class="text-slate-400 mb-4">A workflow is any multi-step process that happens repeatedly: when a new lead fills out a form, create a CRM contact, send a welcome email, notify the sales team on Slack, and schedule a follow-up task. Doing this manually 50 times a day is exhausting. Automating it takes 30 minutes.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">Common Workflows We Automate</h3>
+<p class="text-slate-400 mb-4">Lead capture → CRM → email sequence. Invoice generation and payment reminders. Support ticket creation and routing. Social media content scheduling. Daily report generation and distribution. Inventory alerts when stock drops below threshold. Each of these saves 2–10 hours per week.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">n8n's Killer Feature: Code Nodes</h3>
+<p class="text-slate-400 mb-4">When drag-and-drop isn't enough, n8n lets you drop into JavaScript. This means any API that exists can be connected, any data transformation is possible, and any business logic can be encoded. The ceiling is much higher than tools like Zapier or Make.</p>
+
+<h3 class="text-xl font-semibold text-white mt-6 mb-3">Self-Hosting Advantage</h3>
+<p class="text-slate-400 mb-4">Because n8n runs on your server, sensitive business data never leaves your infrastructure. This is critical for businesses dealing with customer PII, financial records, or healthcare information. Compliance isn't an afterthought — it's built in.</p>
+
+<p class="text-slate-400">Our typical n8n implementation for a small business: 2–3 days of setup, 1 week of workflow building, and ongoing support. ROI is usually positive within the first month. If your team is doing the same manual task more than 5 times a week, it's a candidate for automation.</p>
+        </p>
+      </div>
+    </article>
+    <div class="mt-16 pt-10 border-t border-white/10 flex justify-between items-center">
+      <a href="blog-11.html" class="text-brand-400 hover:text-brand-300 transition-colors text-sm">← Previous Post</a>
+      <a href="blog-13.html" class="text-brand-400 hover:text-brand-300 transition-colors text-sm">Next Post →</a>
+    </div>
+    <div class="mt-12 glass border border-white/10 rounded-3xl p-8 text-center">
+      <h2 class="font-display text-2xl font-bold text-white mb-3">Ready to Work Together?</h2>
+      <p class="text-slate-400 mb-6">Let's build something great for your business.</p>
+      <a href="../contact.html" class="btn-primary text-white font-semibold px-6 py-3 rounded-xl inline-block">Start a Project</a>
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-white/5 py-12 px-6 mt-20">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center">
+        <span class="text-white font-bold text-xs">TP</span>
+      </div>
+      <span class="font-display font-bold text-white">TechiePartner</span>
+    </div>
+    <p class="text-slate-500 text-sm">&copy; 2026 TechiePartner. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="../index.html" class="text-slate-500 hover:text-white text-sm transition-colors">Home</a>
+      <a href="../about.html" class="text-slate-500 hover:text-white text-sm transition-colors">About</a>
+      <a href="../blog.html" class="text-slate-500 hover:text-white text-sm transition-colors">Blog</a>
+      <a href="../contact.html" class="text-slate-500 hover:text-white text-sm transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
