@@ -15,40 +15,42 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">VR</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
                 <a href="#hero">Home</a>
                 <a href="#workflow">Process</a>
                 <a href="#tech-stack">Tech Stack</a>
                 <a href="#contact">Contact</a>
+                <a href="#contact" class="btn btn-primary nav-cta-desktop">
+                    Let's Talk
+                    <span class="arrow-badge">→</span>
+                </a>
             </div>
-            <a href="#contact" class="btn btn-primary">
-                Let's Talk
-                <span class="arrow-badge">→</span>
-            </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-bg"></div>
+        <!-- Portrait silhouette (add your portrait.jpg to the folder) -->
+        <div class="hero-portrait" aria-hidden="true"></div>
+        <div class="hero-portrait-fallback" aria-hidden="true"></div>
+
         <div class="container">
             <div class="hero-content">
                 <div class="hero-left">
-                    <p class="hero-section-label">Senior Software Developer</p>
+                    <p class="hero-label">Senior Software Developer</p>
                     <div class="hero-title-group">
                         <h1 class="hero-title">Turning ideas<br>into digital reality</h1>
                     </div>
                     <p class="hero-description">
                         Creative solutions for complex challenges. Let's build the next big thing together.
                     </p>
-                    <div class="hero-cta">
-                        <a href="#contact" class="btn btn-primary">
-                            Start a project
-                            <span class="arrow-badge">→</span>
-                        </a>
-                    </div>
 
-                    <!-- Service Numbers -->
                     <div class="service-numbers">
                         <div class="service-number-item">
                             <div class="service-number">01</div>
@@ -68,15 +70,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero-right">
-                    <!-- Code Card / Portrait would go here -->
-                    <div class="workflow-item" style="padding: 3rem;">
-                        <h3 style="font-size: 2rem; margin-bottom: 1rem;">Tech Expertise</h3>
-                        <p style="color: var(--gray-muted); line-height: 1.8;">
-                            Full-stack development with modern frameworks, AI integration, and scalable architectures.
-                        </p>
-                    </div>
-                </div>
+                <!-- Empty right side - portrait takes up space -->
+                <div class="hero-right"></div>
             </div>
         </div>
     </section>
@@ -86,6 +81,7 @@
         <div class="container">
             <p class="logos-header">Technologies I Work With</p>
             <div class="logos-track">
+                <!-- Logo items (white text + simple SVG icons) -->
                 <div class="logo-item">
                     <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     Node.js
@@ -110,7 +106,7 @@
                     <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     APIs
                 </div>
-                <!-- Duplicate for scroll loop -->
+                <!-- Duplicate for infinite scroll -->
                 <div class="logo-item">
                     <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                     Node.js
@@ -136,8 +132,8 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-left">
-                    <p class="contact-label">Behind the Designs</p>
-                    <h2 class="about-heading">Let's create something extraordinary together</h2>
+                    <p class="about-label">Behind the Designs</p>
+                    <h2 class="about-title">Let's create something extraordinary together</h2>
                 </div>
                 <div class="about-right">
                     <p class="about-text">

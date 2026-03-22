@@ -5,6 +5,25 @@ if (track) {
     track.innerHTML = content + content;
 }
 
+// ===== Mobile Menu Toggle =====
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
 // ===== Intersection Observer for Scroll Animations =====
 const observerOptions = {
     threshold: 0.1,
@@ -20,11 +39,11 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements
-document.querySelectorAll('.workflow-item, .tech-card, .service-number-item').forEach((el, index) => {
+// Observe workflow items and tech cards
+document.querySelectorAll('.workflow-item, .tech-card, .service-number-item').forEach((el) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
-    el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
@@ -38,7 +57,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ===== smooth scroll =====
+// ===== Smooth scroll for anchor links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -52,7 +71,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Service Numbers Stagger Animation on Load =====
+// ===== Service numbers stagger animation on page load =====
 window.addEventListener('load', () => {
     const items = document.querySelectorAll('.service-number-item');
     items.forEach((item, index) => {
